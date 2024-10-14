@@ -194,18 +194,19 @@ function questionPlay(arrspread){
 
       questionData.forEach((ele)=>{
         ele.addEventListener(("click"),()=>{
-          if(ele.textContent === rightans){
 
+          if(ele.textContent === rightans){
             if(child3_players_heading.textContent === "Player 1"){
               console.log("player1")  
+              ele.textContent = ""
               player1Score+=questionScore
               // alert("Correct Answer")
             }
             else if(child3_players_heading.textContent === "Player 2"){
               console.log("player2")  
               player2Score+=questionScore
+              ele.textContent = ""
               // alert("Correct Answer")
-
             }
           }
         })
@@ -235,9 +236,7 @@ function questionPlay(arrspread){
       child4_totalpoints.textContent = scoreDisplay.p1_score
 
     }
-    else{
-      questionPlay(arrspread)
-    }
+
 
   }
 
