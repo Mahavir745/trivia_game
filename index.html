@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assest/03_assest.png" type="image/x-icon">
+</head>
+<body>
+  <header></header>
+  <main>
+    <div class="main_container">
+      <div class="child child1" id="child1">
+        <div class="child1_items" id="child1_items1">
+          <h1 class="game_heading">Trivia Game</h1>
+        </div>
+        <div class="child1_items" id="child1_items2">
+          <div class="items2_element" id="items2_element1">
+            <span class="game_logo">
+              <img src="assest/09_assest.jpeg" alt="game_logo">
+            </span>
+          </div>
+          <div class="items2_element" id="items2_element2">
+            <span class="play_btn"><button id="start_btn" class="next_btn">Get Start</button></span>
+          </div>
+          <div class="items2_element" id="items2_element3">
+            <span class="info">
+              <p>
+                <h3>Rules:</h3>
+                <ul>
+                  <li>Game is divided into three levels of mode: easy,medium and hard</li>
+                  <li>Each question have points according to their level : Easy: 10, medium: 15 , hard: 20
+                  </li>
+                  <li>All questions are divided into 10 different category</li>
+                  <li>2 player game</li>
+                </ul>
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="child child2" id="child2">
+        <div class="child2_items" id="child2_items1">
+          <h1 class="game_heading"> Player1 Vs Player2</h1>
+        </div>
+        <div class="child2_items" id="child2_items2">
+          <div class="items2_element" id="item2_element1">
+            <img src="assest/05_assest.webp" alt="" id="pofile_pic1">
+            <input type="text" placeholder="player1" id="player1">
+          </div>
+          <div class="items2_element" id="item2_element2">
+            <img src="assest/04_assest.webp" alt="" id="pofile_pic2">
+            <input type="text" placeholder="player2" id="player2">
+          </div>
+        </div>
+        <div class="child2_items" id="child2_items3">
+          <div class="items3_element" id="items3_element1">
+            <select name="category" id="category" class="category">
+              <option value="none">Select the category</option>
+              <option value="music">music</option>
+              <option value="sport_and_leisure">sport_and_leisure</option>
+              <option value="film_and_tv">film_and_tv</option>
+              <option value="arts_and_literature">arts_and_literature</option>
+              <option value="history">history</option>
+              <option value="society_and_culture">society_and_culture</option>
+              <option value="science">science</option>
+              <option value="geography">geography</option>
+              <option value="food_and_drink">food_and_drink</option>
+              <option value="general_knowledge">general_knowledge</option>
+            </select>
+          </div>
+          <div class="items3_element" id="items3_element2">
+            <span class="play_btn">
+            <button id="child2_btn" class="next_btn1">Next</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="child child3" id="child3">
+        <div class="child3_items" id="child3_items1">
+          <p id="level_mode"></p>
+          <h1 class="game_heading" id="players_heading"></h1>
+        </div>
+        <div class="child3_items" id="child3_items2">
+          <div class="item2_element" id="item2_element1">
+            <h2 class="question_info" id="question_info"></h2>
+          </div>
+          <div class="item2_element answerSection" id="item2_element2">
+            <div class="element2_child answer1" id="element2_child1"></div>
+            <div class="element2_child answer2" id="element2_child2"></div>
+            <div class="element2_child answer3" id="element2_child4"></div>
+            <div class="element2_child answer4" id="element2_child3"></div>
+          </div>
+          <div class="items2_element items2_element_message" id="message">
+            <p>Please wait for few minutes, system is fetching your data as well as preparing best question according to your choosen category.</p>
+            <p>Don't refresh the page while this process. <br> wait until a successufully fetched pop up dialog box and a start button have been appeared </p>
+            <button id="start_game">Start Game</button>
+          </div>
+        </div>
+        <div class="child3_items" id="child3_items3">
+          <button class="next_btn3" id="next_btn3">Next</button>
+        </div>
+      </div>
+    
+      <!--!player1 score part -->
+
+      <div class="child child4" id="child4">
+        <div class="child4_items" id="child4_items1">
+          <h1>Player 1 Score Board</h1>
+        </div>
+        <div class="child4_items" id="child4_items2">
+          <div class="items2_element" id="items2_element1"></div>
+          <div class="items2_element" id="items2_element2">
+            <h1 id="player1_name"></h1>
+            <p>Total Score: <span id="totalpoints"></span></p>
+          </div>
+        </div>
+        <div class="child4_items" id="child4_items3">
+          <div class="items3_element" id="items3_element1">
+            <h3 id="player2_scoreboard">Player 2 Score Board</h3>
+          </div>
+          <div class="items3_element" id="items3_element2">
+            <button id="next_btn2">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <!--!player2 score part -->
+      <div class="child child5" id="child5">
+        <div class="child5_items" id="child5_items1">
+          <h1>Player2 Score Board</h1>
+        </div>
+        <div class="child5_items" id="child5_items2">
+          <div class="items2_element" id="items2_element1"></div>
+          <div class="items2_element" id="items2_element2">
+            <h1 id="player2_name"></h1>
+            <p>Total Score: <span id="totalpoints2"></span></p>
+          </div>
+        </div>
+        <div class="child5_items" id="child5_items3">
+          <button id="previous">Previous</button>
+        </div>
+      </div>
+
+      <!--! scoreboard -->
+      <div class="child child6" id="child6">
+        <div class="child6_items" id="child6_items1">
+          <div class="items1_element" id="items1_element1">
+            <h1>Overall Result:</h1>
+          </div>
+          <div class="items1_element" id="items1_element2">
+            <ul id="player1_list">
+              <li>Player1: <span class="name1"></span></li>
+              <li> Score: <span class="storePoints1"></span></li>
+              <li>Category: <span class="categoryname1"></span></li>
+            </ul>
+            <ul id="player2_list">
+              <li> Player2: <span class="name2"></span></li>
+              <li> Score: <span class="storePoints2"></span></li>
+              <li>Category: <span class="categoryname2"></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="child6_items" id="child6_items2">
+          <div class="items2_element" id="items2_element1">
+            <button id="replay">Start again</button>
+          </div>
+          <div class="items2_element" id="items2_element2">
+            <button id="end_btn">End</button>
+          </div>
+        </div>
+      </div>
+      <div class="child child7" id="child7">
+        <div class="child7_items" id="child7_items1">
+          <h1>Thank you</h1>
+        </div>
+        <div class="child7_items" id="child7_items2">
+          <p>
+            Thank you all for playing trivia with us! I hope you enjoyed it too. Whether you got a lot of answers right or just had a good time, your participation made it great! I can’t wait for our next game. Keep having fun and learning!
+          </p>
+          <h6>Managed by Mveer745</h6>
+        </div>
+        <div class="child7_items" id="child7_items3">
+          <h2>Sponsored by:</h2>
+          <div class="items3_element" id="items_element1">
+          <img src="assest/08_assest.png" alt="">
+          </div>
+          <h1>Hackathon 2.0</h1>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+<script src="script.js"></script>
+</html>
